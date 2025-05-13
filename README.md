@@ -1,32 +1,54 @@
-Project Title: Compiler for Surati Language
+# Project Title: Compiler for Surati Language
 
-Description:
-This project implements a basic compiler for the Surati language using Flex and Bison. It supports lexical analysis, parsing, and generation of intermediate code (three-address code). The compiler reads source files written in Surati syntax and produces debug outputs and intermediate representation.
+## Description:
+This project implements a basic compiler for the Surati language using **Flex** and **Bison**.  
+It supports:
+- Lexical Analysis  
+- Syntax Parsing  
+- Intermediate Code Generation (Three-Address Code)
 
-Author: proff. vaibhavi patel
-Name: [Abhay Shinde]
-Roll Number: [22000919]
+The compiler reads Surati source files and produces:
+- `debug.txt`: Debugging outputs  
+- `tac.txt`: Three-Address Code  
 
-How to Run:
-1. Run Flex to generate lexer:
+---
+
+## Author:
+**Prof. Vaibhavi Patel**  
+**Name:** Abhay Shinde  
+**Roll Number:** 22000919  
+
+---
+
+## How to Run:
+### Option 1: Command Line Execution (Manual Steps)
+1. **Run Flex to generate lexer:**
+   ```bash
    flex lexer.l
 
-2. Run Bison to generate parser:
+2. **Run Bison to generate parser:**
+    ```bash
    bison -d parser.y
 
-3. Compile the generated code:
+3. **Compile the generated code**:
+    ```bash
    gcc lex.yy.c parser.tab.c -o compiler
 
-4. Execute:
+4. **Execute**:
+    ```bash
    ./compiler < input1.txt
 
-You can also run via the jupyter notebook provided, it has all the above steps predefined. (requires python installation)
+### Option 2: Run via Jupyter Notebook
 
-Outputs:
+You can also run the compiler using the provided Jupyter Notebook (main.ipynb), which automates all the above steps using Python's subprocess module.
+
+Ensure Python is installed and you are running the notebook in an environment with Flex, Bison, and GCC installed.
+
+## Outputs:
 - debug.txt: Debugging output
 - tac.txt: Three address code
 
-Note:
+## Note:
 Make sure you have Flex and Bison installed before running.
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/bPoO8GTw)
