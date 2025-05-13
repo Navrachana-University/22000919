@@ -32,11 +32,11 @@ The compiler reads Surati source files and produces:
 
 3. **Compile the generated code**:
     ```bash
-   gcc lex.yy.c parser.tab.c -o compiler
+   gcc -o compiler.exe lex.yy.c parser.tab.c
 
 4. **Execute**:
     ```bash
-   ./compiler < input1.txt
+   type input1.txt | compiler.exe
 
 ### Option 2: Run via Jupyter Notebook
 
